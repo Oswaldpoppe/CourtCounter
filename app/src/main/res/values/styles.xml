@@ -1,0 +1,38 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimary">#FF9800</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">#4d0000</item>
+    </style>
+    <!-- Button text style -->
+    <style name="button">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!-- Text layout style -->
+    <style name="text">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">#20000000</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <!-- Title layout style -->
+    <style name="titel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!-- SubTitle layout style -->
+    <style name="subtitel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">#20000000</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

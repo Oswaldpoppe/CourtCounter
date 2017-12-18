@@ -8,9 +8,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.5"
         android:scaleType="centerCrop"
-        android:src="@drawable/back6"
-        android:alpha="0.5"/>
+        android:src="@drawable/back6" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,239 +32,241 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/subtitel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="16dp"
-                android:text="@string/teamA" />
-
-            <TextView
-                style="@style/subtitel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/score"
-                android:textAlignment="center"
-                android:id="@+id/team_a_score"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp">
-
-            <Button
-                style="@style/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/tryButton"
-                android:textSize="10sp"
-                android:onClick="tryTeamA"/>
-
-            <Button
-                style="@style/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/conversionButton"
-                android:textSize="10sp"
-                android:onClick="conversionTeamA"/>
-
-            <Button
-                style="@style/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/goalKickButton"
-                android:textSize="10sp"
-                android:onClick="goalKickTeamA"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                style="@style/text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/score"
-                android:textAlignment="center"
-                android:textSize="26sp"
-                android:id="@+id/try_team_a"
-                />
-
-            <TextView
-                style="@style/text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/score"
-                android:textAlignment="center"
-                android:textSize="26sp"
-                android:id="@+id/conversion_team_a"/>
-
-            <TextView
-                style="@style/text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/score"
-                android:textAlignment="center"
-                android:textSize="26sp"
-                android:id="@+id/kick_team_a"/>
-
-        </LinearLayout>
-            </LinearLayout>
-
-        <View
-            android:layout_width="3dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <TextView
-                    style="@style/subtitel"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/score"
-                    android:textAlignment="center"
-                    android:id="@+id/team_b_score"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <TextView
-                    style="@style/subtitel"
+                    <TextView
+                        style="@style/subtitel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="@string/teamA" />
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        style="@style/subtitel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="16dp"
-                    android:text="@string/teamB" />
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp">
 
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="tryTeamA"
+                        android:text="@string/tryButton"
+                        android:textSize="10sp" />
+
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="conversionTeamA"
+                        android:text="@string/conversionButton"
+                        android:textSize="10sp" />
+
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="goalKickTeamA"
+                        android:text="@string/goalKickButton"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/try_team_a"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/conversion_team_a"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/kick_team_a"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                </LinearLayout>
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <View
+                android:layout_width="3dp"
                 android:layout_height="match_parent"
-                android:paddingRight="16dp">
-
-                <Button
-                    style="@style/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/tryButton"
-                    android:textSize="10sp"
-                    android:onClick="tryTeamB"/>
-
-                <Button
-                    style="@style/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/conversionButton"
-                    android:textSize="10sp"
-                    android:onClick="conversionTeamB"/>
-
-                <Button
-                    style="@style/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/goalKickButton"
-                    android:textSize="10sp"
-                    android:onClick="goalKickTeamB"/>
-            </LinearLayout>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/white"
+                android:paddingBottom="25dp"
+                android:paddingTop="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        style="@style/subtitel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        style="@style/subtitel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="16dp"
+                        android:text="@string/teamB" />
+
+                </LinearLayout>
 
 
-                <TextView
-                    style="@style/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/score"
-                    android:textAlignment="center"
-                    android:textSize="26sp"
-                    android:id="@+id/try_team_b"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="16dp">
 
-                <TextView
-                    style="@style/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/score"
-                    android:textAlignment="center"
-                    android:textSize="26sp"
-                    android:id="@+id/conversion_team_b"/>
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="tryTeamB"
+                        android:text="@string/tryButton"
+                        android:textSize="10sp" />
 
-                <TextView
-                    style="@style/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/score"
-                    android:textAlignment="center"
-                    android:textSize="26sp"
-                    android:id="@+id/kick_team_b"/>
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="conversionTeamB"
+                        android:text="@string/conversionButton"
+                        android:textSize="10sp" />
+
+                    <Button
+                        style="@style/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="goalKickTeamB"
+                        android:text="@string/goalKickButton"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/try_team_b"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/conversion_team_b"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/kick_team_b"
+                        style="@style/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/score"
+                        android:textAlignment="center"
+                        android:textSize="26sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
+
     <TextView
+        android:id="@+id/timerValue"
         style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/timerValue"
-        android:text="@string/timerVal"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/timerVal" />
+
     <Button
+        android:id="@+id/startButton"
         style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/pauseButton"
-        android:id="@+id/startButton"
-        android:text="@string/startButton"/>
+        android:text="@string/startButton" />
 
     <Button
         android:id="@+id/pauseButton"
@@ -275,24 +277,26 @@
         android:layout_toLeftOf="@+id/timerValue"
         android:layout_toStartOf="@+id/timerValue"
         android:text="@string/pauseButton" />
+
     <Button
+        android:id="@+id/reset"
         style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/timerValue"
         android:onClick="reset"
-        android:text="@string/resetButton"
-        android:id="@+id/reset"/>
+        android:text="@string/resetButton" />
+
     <Button
+        android:id="@+id/undo"
         style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/reset"
         android:onClick="undo"
-        android:text="@string/undoButton"
-        android:id="@+id/undo"/>
+        android:text="@string/undoButton" />
 
 
 </RelativeLayout>

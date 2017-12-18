@@ -240,27 +240,29 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <View
+        android:id="@+id/line2"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_weight="1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/white"
-        android:id="@+id/line2"/>
-        <Button
-            android:id="@+id/startButton"
-            style="@style/button"
-            android:layout_toLeftOf="@id/pauseButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:text="@string/startButton" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/startButton"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/pauseButton"
+        android:layout_weight="1"
+        android:text="@string/startButton" />
 
     <Button
         android:id="@+id/reset"
@@ -275,27 +277,27 @@
         android:onClick="reset"
         android:text="@string/resetButton" />
 
-        <Button
-            android:id="@+id/pauseButton"
-            style="@style/button"
-            android:layout_toLeftOf="@id/line2"
-            android:layout_width="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:text="@string/pauseButton" />
+    <Button
+        android:id="@+id/pauseButton"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/line2"
+        android:layout_weight="1"
+        android:text="@string/pauseButton" />
 
-        <Button
-            android:id="@+id/undo"
-            style="@style/button"
-            android:layout_width="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:layout_toRightOf="@id/line2"
-            android:onClick="undo"
-            android:text="@string/undoButton" />
+    <Button
+        android:id="@+id/undo"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/line2"
+        android:layout_weight="1"
+        android:onClick="undo"
+        android:text="@string/undoButton" />
 
 </RelativeLayout>

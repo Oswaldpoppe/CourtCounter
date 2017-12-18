@@ -22,11 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentTop="true"
-            android:text="Rugby Counter"
-            android:textAlignment="center"
-            android:gravity="center"
+            android:layout_marginBottom="20dp"
             android:background="#4d0000"
-            android:layout_marginBottom="20dp"/>
+            android:gravity="center"
+            android:text="@string/titel"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,14 +49,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingLeft="16dp"
-                android:text="Team A" />
+                android:text="@string/teamA" />
 
             <TextView
                 style="@style/subtitel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/score"
                 android:textAlignment="center"
                 android:id="@+id/team_a_score"/>
         </LinearLayout>
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Try"
+                android:text="@string/tryButton"
                 android:textSize="10sp"
                 android:onClick="tryTeamA"/>
 
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Convversion"
+                android:text="@string/conversionButton"
                 android:textSize="10sp"
                 android:onClick="conversionTeamA"/>
 
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Goal Kick"
+                android:text="@string/goalKickButton"
                 android:textSize="10sp"
                 android:onClick="goalKickTeamA"/>
         </LinearLayout>
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/score"
                 android:textAlignment="center"
                 android:textSize="26sp"
                 android:id="@+id/try_team_a"
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/score"
                 android:textAlignment="center"
                 android:textSize="26sp"
                 android:id="@+id/conversion_team_a"/>
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:text="@string/score"
                 android:textAlignment="center"
                 android:textSize="26sp"
                 android:id="@+id/kick_team_a"/>
@@ -159,7 +159,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/score"
                     android:textAlignment="center"
                     android:id="@+id/team_b_score"/>
 
@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingRight="16dp"
-                    android:text="Team B" />
+                    android:text="@string/teamB" />
 
             </LinearLayout>
 
@@ -184,7 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Try"
+                    android:text="@string/tryButton"
                     android:textSize="10sp"
                     android:onClick="tryTeamB"/>
 
@@ -193,7 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Convversion"
+                    android:text="@string/conversionButton"
                     android:textSize="10sp"
                     android:onClick="conversionTeamB"/>
 
@@ -202,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Goal Kick"
+                    android:text="@string/goalKickButton"
                     android:textSize="10sp"
                     android:onClick="goalKickTeamB"/>
             </LinearLayout>
@@ -217,7 +217,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/score"
                     android:textAlignment="center"
                     android:textSize="26sp"
                     android:id="@+id/try_team_b"/>
@@ -227,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/score"
                     android:textAlignment="center"
                     android:textSize="26sp"
                     android:id="@+id/conversion_team_b"/>
@@ -237,7 +237,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/score"
                     android:textAlignment="center"
                     android:textSize="26sp"
                     android:id="@+id/kick_team_b"/>
@@ -264,15 +264,17 @@
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/pauseButton"
         android:id="@+id/startButton"
-        android:text="@string/startButtonLabel"/>
+        android:text="@string/startButton"/>
+
     <Button
+        android:id="@+id/pauseButton"
         style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/timerValue"
         android:layout_alignParentBottom="true"
-        android:id="@+id/pauseButton"
-        android:text="@string/pauseButtonLabel"/>
+        android:layout_toLeftOf="@+id/timerValue"
+        android:layout_toStartOf="@+id/timerValue"
+        android:text="@string/pauseButton" />
     <Button
         style="@style/button"
         android:layout_width="wrap_content"
@@ -280,7 +282,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/timerValue"
         android:onClick="reset"
-        android:text="Reset"
+        android:text="@string/resetButton"
         android:id="@+id/reset"/>
     <Button
         style="@style/button"
@@ -289,7 +291,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/reset"
         android:onClick="undo"
-        android:text="Undo"
+        android:text="@string/undoButton"
         android:id="@+id/undo"/>
 
 

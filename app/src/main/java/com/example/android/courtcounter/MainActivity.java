@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.os.Handler;
 
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
+
+
+
     /**
      * This saves the variables
      */
@@ -42,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putLong("timeInMilliseconds", timeInMilliseconds);
         savedInstanceState.putLong("timeSwapBuff", timeSwapBuff);
         savedInstanceState.putLong("updatedTime", updatedTime);
+        savedInstanceState.putBoolean("isTimeEnabled" , isTimeEnabled);
     }
+
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         timeInMilliseconds = savedInstanceState.getLong("timeInMilliseconds");
         timeSwapBuff = savedInstanceState.getLong("timeSwapBuff");
         updatedTime = savedInstanceState.getLong("updatedTime");
+        isTimeEnabled = savedInstanceState.getBoolean("isTimeEnabled");
 
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
@@ -65,11 +72,19 @@ public class MainActivity extends AppCompatActivity {
         displayConversionTeamB(conversionTeamB);
         displaykickTeamA(goalKickTeamA);
         displaykickTeamB(goalKickTeamB);
+        if (isTimeEnabled) {
+            timeSwapBuff += timeInMilliseconds;
+            startTime = SystemClock.uptimeMillis();
+            customHandler.postDelayed(updateTimerThread, 0);
+        }
+        else {
+        }
 
     }
     /**
      * Timer
      */
+    boolean isTimeEnabled = false;
     private Button startButton;
     private Button pauseButton;
     private TextView timerValue;
@@ -218,13 +233,16 @@ public class MainActivity extends AppCompatActivity {
         displayConversionTeamB(conversionTeamB);
         goalKickTeamB = 0;
         displaykickTeamB(goalKickTeamB);
+        customHandler.removeCallbacks(updateTimerThread);
+        if (isTimeEnabled)
+            isTimeEnabled = false;
         timerValue.setText("00:00:00");
         startTime = 0L;
         timeInMilliseconds = 0L;
         timeSwapBuff = 0L;
         updatedTime = 0L;
-    }
 
+    }
 
 
     @Override
@@ -239,9 +257,10 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                startTime = SystemClock.uptimeMillis();
-                customHandler.postDelayed(updateTimerThread, 0);
-
+                if (!isTimeEnabled){
+                    isTimeEnabled = true;
+                    startTime = SystemClock.uptimeMillis();
+                    customHandler.postDelayed(updateTimerThread, 0);}
             }
         });
 
@@ -251,6 +270,8 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view) {
 
+                if (isTimeEnabled)
+                    isTimeEnabled = false;
                 timeSwapBuff += timeInMilliseconds;
                 customHandler.removeCallbacks(updateTimerThread);
 
